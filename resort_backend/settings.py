@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'hotel-booking-server-57rd.onrender.c
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://..."
+    "https://paradise-hotel-booking.netlify.app",
 ]
 
 # CORS_ALLOW_ALL_ORIGINS = True
