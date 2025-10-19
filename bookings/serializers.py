@@ -1,8 +1,6 @@
 from rest_framework import serializers
 from .models import Booking
-from django.views.decorators.csrf import csrf_exempt
 
-@method_decorator(csrf_exempt, name='dispatch')
 class BookingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Booking
@@ -14,7 +12,7 @@ class BookingSerializer(serializers.ModelSerializer):
         return value
     
     def validate_guest(self, value):
-        if not value.isdigit() or value < 0:
+        if not value.isdigit() or value < 1:
             raise serializers.ValidationError('Guest must be atleast 1')
         return value
     
