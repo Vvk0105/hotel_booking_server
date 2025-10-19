@@ -39,6 +39,9 @@ CORS_ALLOWED_ORIGINS = [
     "https://paradise-hotel-booking.netlify.app",
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True
+
+
 # CORS_ALLOW_ALL_ORIGINS = True
 
 REST_FRAMEWORK = {
