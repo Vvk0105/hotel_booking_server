@@ -27,7 +27,12 @@ SECRET_KEY = 'django-insecure-ci)fooo0%fcp!tbv61z)q6q7il^^l^nq)+j-de&gpd^^9n9@&w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'paradise-hotel-booking.netlify.app']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    'paradise-hotel-api.onrender.com',
+    'hotel-booking-server-57rd.onrender.com',
+]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
