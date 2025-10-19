@@ -7,13 +7,11 @@ class BookingSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def validate_phone(self, value):
-        if not value.isdigit() or len(value) != 10:
+        if value and (not value.isdigit() or len(value) != 10):
             raise serializers.ValidationError('Phone number must be 10 digits')
         return value
     
     def validate_guests(self, value):
-        if not value.isdigit() or value < 1:
-            raise serializers.ValidationError('Guest must be atleast 1')
+        if value < 1:
+            raise serializers.ValidationError('Guest must be at least 1')
         return value
-    
-    
